@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: APIGateway
+server:
+  port:
+    ${SERVER_PORT:8080}
+app:
+  apigateway:
+    ordersserviceurl: "${ORDERS_SERVICE_URL:http://localhost:8081}/api/v1/orders"
+    paymentsserviceurl: "${PAYMENTS_SERVICE_URL:http://localhost:8082}/api/v1/payments"
